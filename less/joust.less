@@ -692,35 +692,52 @@
 .tray {
 	display: flex;
 	flex-direction: row;
-	font-family: serify;
-
+	font-family: "Belwe Bd BT";
 	width: 100%;
-	height: 16px;
+	height: 26px;
 	padding: 1px;
-	border-radius: 5px;
-
-	background-color: beige;
-	border: black solid 1px;
+	background-color: rgba(0, 0, 0, 0.3);
+	align-self: center;
 
 	> span {
-		margin: auto 3px;
-		font-size: 0.7em;
-		line-height: 1.2em;
+		padding: auto 3px;
+		width: 2.7em;
+		color: white;
+		font-size: 0.8em;
+		height: 2.5em;
+		text-align: center;
+		line-height: 2.5em;
+		align-self: center;
+		text-shadow: -1px -1px 0 #000,
+			1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 	}
 
 	.crystal {
-		height: 12px;
-		width: 12px;
-		margin-right: 2px;
-		border-radius: 50%;
-		border: white solid 1px;
+		position: relative;
+		height: 22px;
+		width: 22px;
+		margin: 0 2px;
+		background-color: #000056;
+		opacity: 1;
+		-webkit-transition: background-color 400ms linear, opacity 400ms linear;
+		-moz-transition: background-color 400ms linear, opacity 400ms linear;
+		-o-transition: background-color 400ms linear, opacity 400ms linear;
+		-ms-transition: background-color 400ms linear, opacity 400ms linear;
+		transition: background-color 400ms linear, opacity 400ms linear;
+		clip-path: url(assets/clip-paths.svg#mana-clip);
+		-webkit-clip-path: polygon(75% 7%, 100% 50%, 75% 93%, 25% 93%, 0% 50%, 25% 7%);
 
 		&.full {
 			background-color: #1e58ff;
 		}
 
 		&.empty {
-			background-color: #000056;
+		}
+
+		&.hidden {
+			opacity: 0;
 		}
 	}
 }
